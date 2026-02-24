@@ -14,7 +14,7 @@ const emptyState = document.getElementById("emptyState");
 const allBtn = document.getElementById("all-filter-btn");
 const interviewBtn = document.getElementById("interview-filter-btn");
 const rejectedBtn = document.getElementById("rejected-filter-btn");
-const jobSummary = document.getElementById("jobSummary");
+const jobSummary = document.querySelector("jobSummary");
 
 const mainContainer = document.querySelector("main");
 
@@ -26,7 +26,7 @@ function calculateCount() {
   rejected.innerText = rejectedList.length;
   
 }
-calculateCount();
+
 
 
 // toggle button
@@ -59,7 +59,9 @@ function toggleStyle(id){
     filteredSection.classList.remove("hidden");
     renderRejected();
   }
+  calculateCount();
 }
+
 
 // Event Handler
 mainContainer.addEventListener("click", function (event) {
