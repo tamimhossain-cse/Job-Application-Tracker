@@ -41,22 +41,27 @@
         <button
           onclick="toggleStyle('interview-filter-btn')"
           class="px-5 py-2 bg-gray-300 rounded-lg"
-          id="thrive-filter-btn"
+          id="interview-filter-btn"
         >
           Interview
         </button>
         <button
           onclick="toggleStyle('rejected-filter-btn')"
           class="px-5 py-2 bg-gray-300 rounded-lg"
-          id="struggle-filter-btn"
+          id="rejected-filter-btn"
         >
           Rejected
         </button>
       </div>
          <div>
-            <p> 8 jobs</p>
+            <p class="jobSummary"> 8 jobs</p>
          </div>
         </div>
+        <!-- after flitering -->
+       <section class="hidden" id="filtered-section">
+
+       </section>
+
      
       <section id="allCard" class="space-y-3">
         <!-- card 1-->
@@ -65,19 +70,19 @@
           <div class="space-y-6">
             <!-- part 1 -->
             <div>
-              <p class="plantName text[15px]">Mobile First Corp</p>
-              <p class="latinName text-[15px] text-gray-500">React Native Developer</p>
+              <p class="companyName text[15px]">Mobile First Corp</p>
+              <p class="skill text-[15px] text-gray-500">React Native Developer</p>
             </div>
             <!-- part 2 -->
             <div >
-               <p class="text-gray-500 text-[12px]">Remote • Full-time • $130,000 - $175,000</p>
+               <p class="type text-gray-500 text-[12px]">Remote • Full-time • $130,000 - $175,000</p>
             </div>
             <!-- part 3 -->
-            <p class="flex justify-center w-30 bg-gray-200">NOT APPILED</p>
-            <p class="text-gray-600">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+            <p class="status flex justify-center w-30 bg-gray-200">NOT APPILED</p>
+            <p class=" about text-gray-600">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
             <div class="flex gap-3">
-              <button class="btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
-              <button class="btn border-2 border-red-500 text-red-500 px-4 py-2">
+              <button class="interview-btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
+              <button class="rejected-btn border-2 border-red-500 text-red-500 px-4 py-2">
                 Rejected
               </button>
             </div>
@@ -93,17 +98,17 @@
          <div class="card flex justify-between  p-8 shadow">
   <div class="space-y-6">
     <div>
-      <p class="plantName text-[15px]">CloudCore Ltd</p>
-      <p class="latinName text-[15px] text-gray-500">Backend Engineer (Node.js)</p>
+      <p class="companyName text-[15px]">CloudCore Ltd</p>
+      <p class="skill text-[15px] text-gray-500">Backend Engineer (Node.js)</p>
     </div>
     <div>
-      <p class="text-gray-500 text-[12px]">Remote • Full-time • $95,000 - $130,000</p>
+      <p class="type text-gray-500 text-[12px]">Remote • Full-time • $95,000 - $130,000</p>
     </div>
-    <p class="flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
-    <p class="text-gray-600">Develop scalable REST APIs and microservices using Node.js and MongoDB.</p>
+    <p class="status flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
+    <p class="about text-gray-600">Develop scalable REST APIs and microservices using Node.js and MongoDB.</p>
     <div class="flex gap-3">
-      <button class="btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
-      <button class="btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
+      <button class="interview-btn  border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
+      <button class="rejected-btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
     </div>
   </div>
   <div>
@@ -117,17 +122,17 @@
        <div class="card flex justify-between  p-8 shadow">
   <div class="space-y-6">
     <div>
-      <p class="plantName text-[15px]">PixelCraft Studio</p>
-      <p class="latinName text-[15px] text-gray-500">UI/UX Designer</p>
+      <p class="companyName text-[15px]">PixelCraft Studio</p>
+      <p class="skill text-[15px] text-gray-500">UI/UX Designer</p>
     </div>
     <div>
-      <p class="text-gray-500 text-[12px]">Berlin • Full-time • $70,000 - $100,000</p>
+      <p class="type text-gray-500 text-[12px]">Berlin • Full-time • $70,000 - $100,000</p>
     </div>
-    <p class="flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
-    <p class="text-gray-600">Design intuitive user interfaces and improve product usability across platforms.</p>
+    <p class="status flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
+    <p class="about text-gray-600">Design intuitive user interfaces and improve product usability across platforms.</p>
     <div class="flex gap-3">
-      <button class="btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
-      <button class="btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
+      <button class="interview-btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
+      <button class="rejected-btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
     </div>
   </div>
   <div>
@@ -141,17 +146,17 @@
 <div class="card flex justify-between  p-8 shadow">
   <div class="space-y-6">
     <div>
-      <p class="plantName text-[15px]">Insight Analytics</p>
-      <p class="latinName text-[15px] text-gray-500">Data Analyst</p>
+      <p class="companyName text-[15px]">Insight Analytics</p>
+      <p class=" skill latinName text-[15px] text-gray-500">Data Analyst</p>
     </div>
     <div>
-      <p class="text-gray-500 text-[12px]">Toronto • Full-time • $80,000 - $115,000</p>
+      <p class="type text-gray-500 text-[12px]">Toronto • Full-time • $80,000 - $115,000</p>
     </div>
-    <p class="flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
-    <p class="text-gray-600">Analyze business data and create dashboards for executive teams.</p>
+    <p class=" status flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
+    <p class="about text-gray-600">Analyze business data and create dashboards for executive teams.</p>
     <div class="flex gap-3">
-      <button class="btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
-      <button class="btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
+      <button class="interview-btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
+      <button class="rejected-btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
     </div>
   </div>
   <div>
@@ -164,17 +169,17 @@
  <div class="card flex justify-between  p-8 shadow">
   <div class="space-y-6">
     <div>
-      <p class="plantName text-[15px]">QualityWorks</p>
-      <p class="latinName text-[15px] text-gray-500">QA Engineer</p>
+      <p class="companyName text-[15px]">QualityWorks</p>
+      <p class="skill text-[15px] text-gray-500">QA Engineer</p>
     </div>
     <div>
-      <p class="text-gray-500 text-[12px]">Remote • Contract • $60,000 - $90,000</p>
+      <p class="type text-gray-500 text-[12px]">Remote • Contract • $60,000 - $90,000</p>
     </div>
-    <p class="flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
-    <p class="text-gray-600">Perform automated testing and ensure high software quality standards.</p>
+    <p class=" status flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
+    <p class="about text-gray-600">Perform automated testing and ensure high software quality standards.</p>
     <div class="flex gap-3">
-      <button class="btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
-      <button class="btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
+      <button class="interview-btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
+      <button class="rejected-btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
     </div>
   </div>
   <div>
@@ -187,17 +192,17 @@
  <div class="card flex justify-between  p-8 shadow">
   <div class="space-y-6">
     <div>
-      <p class="plantName text-[15px]">InfraStack</p>
-      <p class="latinName text-[15px] text-gray-500">DevOps Engineer</p>
+      <p class="companyName text-[15px]">InfraStack</p>
+      <p class="skill text-[15px] text-gray-500">DevOps Engineer</p>
     </div>
     <div>
-      <p class="text-gray-500 text-[12px]">Amsterdam • Full-time • $100,000 - $140,000</p>
+      <p class="type text-gray-500 text-[12px]">Amsterdam • Full-time • $100,000 - $140,000</p>
     </div>
-    <p class="flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
-    <p class="text-gray-600">Maintain CI/CD pipelines and manage AWS cloud infrastructure.</p>
+    <p class=" status flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
+    <p class="about text-gray-600">Maintain CI/CD pipelines and manage AWS cloud infrastructure.</p>
     <div class="flex gap-3">
-      <button class="btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
-      <button class="btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
+      <button class="interview-btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
+      <button class="rejected-btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
     </div>
   </div>
   <div>
@@ -210,17 +215,17 @@
  <div class="card flex justify-between  p-8 shadow">
   <div class="space-y-6">
     <div>
-      <p class="plantName text-[15px]">BrightTech</p>
-      <p class="latinName text-[15px] text-gray-500">Product Manager</p>
+      <p class="companyName text-[15px]">BrightTech</p>
+      <p class="skill text-[15px] text-gray-500">Product Manager</p>
     </div>
     <div>
-      <p class="text-gray-500 text-[12px]">London • Full-time • $110,000 - $150,000</p>
+      <p class="type text-gray-500 text-[12px]">London • Full-time • $110,000 - $150,000</p>
     </div>
-    <p class="flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
-    <p class="text-gray-600">Lead product strategy and collaborate with engineering teams.</p>
+    <p class=" status flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
+    <p class="about text-gray-600">Lead product strategy and collaborate with engineering teams.</p>
     <div class="flex gap-3">
-      <button class="btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
-      <button class="btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
+      <button class="interview-btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
+      <button class="rejected-btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
     </div>
   </div>
   <div>
@@ -233,17 +238,17 @@
  <div class="card flex justify-between  p-8 shadow">
   <div class="space-y-6">
     <div>
-      <p class="plantName text-[15px]">NextGen Labs</p>
-      <p class="latinName text-[15px] text-gray-500">Frontend Developer</p>
+      <p class="companyName text-[15px]">NextGen Labs</p>
+      <p class="skill text-[15px] text-gray-500">Frontend Developer</p>
     </div>
     <div>
-      <p class="text-gray-500 text-[12px]">Remote • Full-time • $90,000 - $125,000</p>
+      <p class="type text-gray-500 text-[12px]">Remote • Full-time • $90,000 - $125,000</p>
     </div>
-    <p class="flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
-    <p class="text-gray-600">Develop responsive web applications using modern JavaScript frameworks.</p>
+    <p class=" status flex justify-center w-30 bg-gray-200">NOT APPLIED</p>
+    <p class="about text-gray-600">Develop responsive web applications using modern JavaScript frameworks.</p>
     <div class="flex gap-3">
-      <button class="btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
-      <button class="btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
+      <button class="interview-btn border-2 border-green-500 text-green-500 px-4 py-2">Interview</button>
+      <button class="rejected-btn border-2 border-red-500 text-red-500 px-4 py-2">Rejected</button>
     </div>
   </div>
   <div>
@@ -253,7 +258,15 @@
   </div>
 </div>
       </section>
-    </main>
+      <section>
+        <!-- Empty div -->
+<div id="emptyState" class="hidden w-100 mx-auto justify-between text-center p-8 shadow">  <i class="fa-solid fa-briefcase text-4xl text-gray-300"></i>
+  <p class="text-xl mt-2">No Jobs Available</p>
+  <p class="text-gray-400">Check back soon for new job opportunities</p>
+</div>
   
+      </section>
+    </main>
+  <script src="script.js"></script>
   </body>
 </html>
