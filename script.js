@@ -171,10 +171,11 @@ function renderInterview() {
         <button class="rejected-btn border-2 border-red-500 px-4 py-2">Rejected</button>
       </div>
     </div>
-
+<div>
     <button class="btn rounded-full bg-gray-100 px-5 py-2">
-      <i class="fa-solid fa-trash-can"></i>
+      <i class=" fa-solid fa-trash-can"></i>
     </button>
+    </div>
     `;
 
     filteredSection.appendChild(div);
@@ -214,10 +215,11 @@ function renderRejected() {
         <button class="rejected-btn border-2 border-red-500 px-4 py-2">Rejected</button>
       </div>
     </div>
-
+<div>
  <button class="btn rounded-full bg-gray-100 px-5 py-2">
       <i class="fa-solid fa-trash-can"></i>
     </button>
+    </div>
     `;
 
     filteredSection.appendChild(div);
